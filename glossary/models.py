@@ -1,8 +1,9 @@
 from django.db import models
 
 class Term(models.Model):
-    title       = models.CharField(max_length=250)
-    slug        = models.SlugField(unique=True)
+    title = models.CharField(max_length=250)
+    ipa = models.CharField(max_length=250)
+    slug = models.SlugField(unique=True)
     description = models.TextField()
 
     class Meta:
