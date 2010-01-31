@@ -32,7 +32,7 @@
 
        {% for term in object_list %}
             <dt><a href="{{ term.slug }}/">{{ term.title }}</a></dt>
-            {% for synonym in term.synonyms  %}
+            {% for synonym in term.synonyms.all  %}
                 <dt class="synonym">{{ synonym.title }}</dt>
             {% endfor %}
             <dd class="definition">{{ term.description }}</dd>
