@@ -1,6 +1,6 @@
 Purpose:
 
-Create a glossary for a site. 
+Create a glossary for a site.
 
 Current features:
 
@@ -10,6 +10,6 @@ Search!
 ABC quick nav
 
 Roadmap for the future:
- - Term view
+ - Term view - Done
  - Multiple glossaries per site
  - Pop-up rendering on rich text fields
