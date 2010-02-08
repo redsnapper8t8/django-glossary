@@ -1,10 +1,16 @@
 from django.db import models
 
 class Term(models.Model):
-    title = models.CharField(max_length=250)
-    ipa = models.CharField(max_length=250)
+    TYPE_CHOICES = (
+        (PERSON_TYPE, 'Person'),
+        (STYLE_TYPE, 'Style'),
+        (PHILOSOPHY_TYPE, 'Philosopy'),
+    )
+    title = models.CharField(max_length=250, unique=True)
+    ipa = models.CharField(max_length=250, unique=True, blank=True)
     slug = models.SlugField(unique=True)
-    description = models.TextField()
+    description = models.TextField(blank=True, blank=True)
+    type = models.PositiveSmallIntegerField(choices=TYPE_CHOICES, blank=True)
 
     class Meta:
         ordering = ['title']
