@@ -19,8 +19,8 @@ class Term(models.Model):
         ordering = ['title']
 
     @models.permalink
-    def get_absolute_url(self):
-       return ('glossary_detail', (), {'slug': self.slug})
+    #def get_absolute_url(self):
+    #   return ('glossary_detail', (), {'slug': self.slug})
 
     def __unicode__(self):
         return unicode(self.title)
